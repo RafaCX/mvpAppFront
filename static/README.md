@@ -4,8 +4,9 @@
 1. Certifique-se de que o arquivo `app.py` está configurado para servir os arquivos estáticos do frontend:
    ```python
    # Configurar caminho do frontend
-   FRONTEND_PATH = "../mvp_app_front/static"
-
+   FRONTEND_PATH = "../mvpAppFront/static"
+   # em minha pasta estava salvo como mvp_app_front mas como salvei o repository como mvpAppFront eu alterei para nao dar erro com o sistema na hora de rodar o front
+   
    # Rota para servir o frontend
    @app.route('/')
    def index():
