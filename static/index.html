@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>MVP</title>
+</head>
+<body>
+    <!-- Cabeçalho do sistema -->
+    <header>
+        <div class="title">
+            <h1>MVP</h1>
+        </div>
+    </header>
+
+<main>
+    <!-- Seção de usuários -->
+    <section class="users">
+        <h2>Usuários</h2>
+        <div class="newUser">
+            <input type="text" id="newUserName" placeholder="Adicionar novo usuário">
+            <button id="addUserButton" onclick="newUser()" class="addBtn">Adicionar</button>
+        </div>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="userList">
+                <!-- Usuários serão carregados dinamicamente -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Seção de categorias -->
+    <section class="categories">
+        <h2>Categorias</h2>
+        <div class="newCategory">
+            <input type="text" id="newCategoryName" placeholder="Adicionar nova categoria">
+            <button id="addCategoryButton" class="addBtn">Adicionar</button>
+        </div>
+        <table id="categoryTable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Id</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="categoryList">
+                <!-- Categorias serão carregadas dinamicamente -->
+            </tbody>
+        </table>
+    </section>
+<!-- Seção de filmes -->
+<!-- Seção de filmes -->
+<section class="movies">
+    <h2>Filmes</h2>
+    <div class="newMovie">
+        <input type="text" id="newMovieName" placeholder="Adicionar novo filme">
+        <select id="movieCategory">
+            <!-- As opções de categorias serão carregadas dinamicamente -->
+        </select>
+        <input type="number" id="movieRating" min="1" max="10" placeholder="Nota (1 a 10)">
+        <button id="addMovieButton" class="addBtn">Adicionar</button>
+    </div>
+
+    <!-- Botão de listar filmes por categoria
+    <input type="text" id="searchCategory" placeholder="Inserir ID da categoria">
+    <button id="searchMoviesButton">Buscar Filmes</button> -->
+    <table id="movieList">
+        <thead>
+            <tr>
+                <th>Nome do Filme</th>
+                <th>Categoria</th>
+                <th>Nota</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os filmes serão adicionados aqui -->
+        </tbody>
+    </table>
+</section>
+<!-- Seção de avaliações -->
+<section class="avaliacoes">
+    <h2>Avaliação do Filme</h2>
+    <div class="newAvaliacao">
+        <select id="avaliarFilme" class="avaliarFilme">
+            <option value="">Selecione um filme</option>
+            <!-- As opções de filmes serão carregadas dinamicamente -->
+        </select>
+        <input type="number" id="notaAvaliacao" min="1" max="10" placeholder="Nota (1 a 10)">
+        <button id="addAvaliacaoButton" class="addBtn">Avaliar</button>
+    </div>
+    
+</section>
+
+</main>
+
+
+<script src="scripts.js"></script>
+</body>
+</html>

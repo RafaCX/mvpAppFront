@@ -1,0 +1,140 @@
+/* Definindo uma paleta de cores */
+:root {
+    --background-color: rgb(225, 222, 199);
+    --primary-color: rgb(35, 32, 24);
+    --secondary-color: rgb(200, 199, 199);
+    --highlight-color: #2ab53a;
+    --table-hover-color: rgb(240, 240, 240);
+    --button-bg-color: rgb(35, 32, 24);
+    --button-hover-bg-color: #2ab53a;
+    --button-text-color: white;
+    --input-border-color: rgb(35, 32, 24);
+    --table-bg-color: white;
+}
+
+/* Reset básico */
+* {
+    box-sizing: border-box;
+}
+
+body, ul, li {
+    font-family: 'Tahoma', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: var(--primary-color);
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 10px 0;
+}
+
+.title h1 {
+    color: var(--button-text-color);
+    margin: 0;
+}
+
+/* Estilo do conteúdo principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    width: 90%;
+}
+
+/* Títulos das seções */
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Formulários para adicionar novos itens */
+.newUser, .newCategory, .newMovie {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Estilo dos inputs e botões */
+input, select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 4px;
+    width: 250px;
+}
+
+button.addBtn {
+    padding: 12px 20px;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button.addBtn:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+/* Estilo das tabelas */
+table {
+    width: 100%;
+    background-color: var(--table-bg-color);
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid var(--primary-color);
+    font-size: 16px;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+tr:nth-child(odd) {
+    background-color: var(--table-hover-color);
+}
+
+tr:hover {
+    background-color: var(--secondary-color);
+}
+
+th:nth-child(1) {
+    width: 50%;
+}
+
+th:nth-child(2), th:nth-child(3) {
+    width: 25%;
+}
+
+/* Estilo das seções de filmes, usuários e categorias */
+.users, .categories, .movies {
+    width: 100%;
+}
+
+/* Estilo para a avaliação */
+.avaliacoes .newAvaliacao {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.avaliacoes select, .avaliacoes input {
+    width: 200px;
+    padding: 12px;
+}
